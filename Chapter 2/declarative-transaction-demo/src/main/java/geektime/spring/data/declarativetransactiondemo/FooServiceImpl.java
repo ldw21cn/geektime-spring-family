@@ -24,6 +24,9 @@ public class FooServiceImpl implements FooService {
     }
 
     @Override
+    // @Transactional(rollbackFor = RollbackException.class)
+    // 如果此处不加注解，则是使用隐式的事务方式，即没有事务
+    // 如果此处加了注解，则使用事务方式执行
     public void invokeInsertThenRollback() throws RollbackException {
         insertThenRollback();
     }

@@ -19,10 +19,16 @@
 	</properties>
 
 	<dependencies>
+
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+
+		<!--  注意： 如果要使用 druid，一定要在 jdbc 中排除掉默认的 HikariCP		-->
+		<!--  只有排除掉HikariCP后，才可以在下面引入 druid-spring-boot-starter	 	-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
@@ -49,6 +55,7 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!--引入 druid 启动类-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>

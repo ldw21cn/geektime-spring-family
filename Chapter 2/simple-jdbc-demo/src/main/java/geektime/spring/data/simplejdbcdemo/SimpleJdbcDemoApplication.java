@@ -40,7 +40,7 @@ public class SimpleJdbcDemoApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         fooDao.insertData();
-        batchFooDao.batchInsert();
+        // batchFooDao.batchInsert();
         fooDao.listData();
     }
 
